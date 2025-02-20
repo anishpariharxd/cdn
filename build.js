@@ -23,7 +23,7 @@ async function populateCSS({
   background = "https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1500&q=80"
 } = {}) {
   /* Get the theme the user requests. Defaults to 'light' */
-  theme = `${theme}.css`;
+  theme = `dark.css`;
   let template = path.resolve(assetDir, "index.css");
   let stylesheet = path.join(outDir, "index.css");
 
