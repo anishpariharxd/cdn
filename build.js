@@ -19,7 +19,7 @@ const config = path.join(outDir, "config.json");
  * arguments.
  */
 async function populateCSS({
-  theme = "light",
+  theme = "dark",
   background = "https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1500&q=80"
 } = {}) {
   /* Get the theme the user requests. Defaults to 'light' */
@@ -39,8 +39,8 @@ async function populateCSS({
   let themes = await fs.readdirAsync(path.join(assetDir, "themes"));
 
   if (!themes.includes(theme)) {
-    console.error('Error: Requested theme not found. Defaulting to "light".');
-    theme = "light";
+    console.error('Error: Requested theme not found. Defaulting to "dark".');
+    theme = "dark";
   }
   /* Read in the theme stylesheet */
   let themeSource = await fs.readFileSync(path.join(assetDir, "themes", theme));
